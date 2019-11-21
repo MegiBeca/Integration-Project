@@ -1,0 +1,34 @@
+'''
+Functions to calculate and format possible savings
+author = Megi Beca
+'''
+
+
+# Calculates the percent saved off an item then format's the output
+def identifying_percent_off():
+    print("Hello")
+    original_price = float(input("Enter the original cost of the item: "))
+    sale_price = float(input("Enter the sale price: "))
+    percent_off = int((original_price - sale_price) / original_price * 100)
+    print("Original price: $", format(original_price, ".2f"), sep="")
+    print("Sale price: $", format(sale_price, ".2f"), sep="")
+    print("Percent off: ", format(percent_off, "d"), "%", sep="")
+
+
+# Calculates the percent saved off an item then responds with what tear the sale is in
+def identifying_savings():
+    is_bad = True
+    while is_bad:
+        try:
+            original_price = int(input("Enter the original price of the item: "))
+            price = int(input("Enter your price: "))
+            is_bad = False
+            percent_off = int((original_price - price) / original_price * 100)
+            if percent_off >= 70:
+                print("You got", percent_off, "percent off, you got a great deal")
+            elif percent_off >= 50:
+                print("You got", percent_off, "percent off, you got a deal")
+            else:
+                print("You got", percent_off, "percent off, you got an ok deal")
+        except ValueError:
+            print("You did not enter a whole number")
