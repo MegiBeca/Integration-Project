@@ -1,0 +1,6 @@
+'''
+data get sent here to be formatted
+author = Megi Beca
+'''
+
+def formatting_receipts(list[]):
