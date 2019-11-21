@@ -4,6 +4,7 @@ author = Megi Beca
 '''
 
 # Calculated bonus depending on amount of sales and formats it
+# credit to HacckerRank.com rank for prompt
 def bonuses():
     sales = int(input("Enter the amount of sales you've had this year"))
     bonus = 0
@@ -18,3 +19,11 @@ def bonuses():
     else:
         bonus = 0
     print("Your bonus is ${:,.2f}".format(bonus))
+
+
+# Calculates the annual income
+def income():
+    hours = int(input("How many hour a week do you work?"))
+    hourly = int(input("How much do you make per hour?"))
+    sum = hourly * hours * (4 * 13)
+    print("You early approximately", sum, "per yeaar")
