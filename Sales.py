@@ -35,24 +35,24 @@ def identifying_savings():
 
 def change():
     user_input = True
-    sum = 0
+    sum1 = 0
     print("Enter 'x' when you're done entering prices.")
     while user_input:
-        #Get the price of the first item
+        # Get the price of the first item
         price = float(input("Enter the price of an item.\n"))
-        sum += price
+        sum1 += price
         if price == "x" or price == "X":
             user_input = False
-    #Get the payment amount
+    # Get the payment amount
     payment = float(input("How much did you pay?\n"))
 
-    difference = payment - sum
+    difference = payment - sum1
     # Determine if customer still owes
-    if payment < sum:
+    if payment < sum1:
         print("You still owe ${:,.2f}".format(-difference))
 
     # or if change is owed
-    if payment>sum:
+    if payment > sum1:
         print("Thank you, your change is ${:,.2f}".format(difference))
     else:
         print("Thank you for shopping with us, and have a great day.")
