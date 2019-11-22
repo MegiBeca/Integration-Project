@@ -3,7 +3,10 @@ data get sent here to be formatted
 author = Megi Beca
 '''
 import locale
-locale.setlocale( locale.LC_ALL, '' )
+
+locale.setlocale(locale.LC_ALL, '')
+
+
 # Receipt formatter
 def formatting_receipts():
     user_input = True
@@ -19,12 +22,12 @@ def formatting_receipts():
         sum += price
         if end == "x" or end == "X":
             user_input = False
-    user_input = True
     print("Amount          Tax          Sum          Item")
     for x in range(len(list)):
         tax = float(list2[x] * 0.075)
         tax_sum = list2[x] + tax
-        print(locale.currency(list2[x]), "        ", locale.currency(tax), "        ", locale.currency(tax_sum), "       ", list[x])
+        print(locale.currency(list2[x]), "        ", locale.currency(tax), "        ", locale.currency(tax_sum),
+              "       ", list[x])
     print("Total:    ", sum)
 
 
